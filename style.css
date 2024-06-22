@@ -21,6 +21,7 @@
 }
 
 
+  /*  Config Global */
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +37,7 @@ body {
 }
 
 
+    /* Main Geral */
 .voitto-geral {
   background-color: var(--cor1);
   width: 100vw;
@@ -55,6 +57,7 @@ body {
 } 
 
 
+        /* SECTION 1 */
 
 .apresentação1-voitto {
   display: grid;
@@ -80,8 +83,6 @@ body {
   color: var(--color-titulo);
   font-weight: 800;
   font-size: 38px;
-
-  /* width: 535px; */
 }
 
 .textfield1 > p {
@@ -155,6 +156,8 @@ body {
 }
 
 
+    /* SECTION 2 */
+
 .apresentação2-voitto {
   background: var(--cor2);
   
@@ -198,6 +201,7 @@ body {
   gap: 20px;
 }
 
+    /* SECTION 3 */
 
 
 .apresentação3-voitto {
@@ -253,20 +257,7 @@ body {
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    /* RESPONSIVO TABLETS */
 
 @media (min-width: 780px) and (max-width:1024px) {
 
@@ -387,6 +378,8 @@ body {
 
 
 
+    /* RESPONSIVO CELULARES */
+
 
 @media (max-width: 780px) {
 
@@ -411,7 +404,7 @@ body {
   } 
 
   .textfield1  {
-    transform: translate(-60%);
+   transform: translate(-65%);
    align-items: center;
    width: 274px;
 
@@ -427,6 +420,7 @@ body {
 
 
   .textfield1 .text_alert {
+    font-size: 1rem;
     width: 274px ;
   }
 
@@ -437,10 +431,16 @@ body {
    & .btn-enviar {
     width: 274px ;
     font-size: 1rem;
+    transition: .1s;
    }
+
 
    & input  {
     width: 274px;
+   }
+
+   & input:focus {
+    border: 1px solid var(--cor3);
    }
 } 
 
@@ -468,6 +468,12 @@ body {
 
   .btn-enviar {
     width: 274px;
+    transition: .1s;
+  }
+
+  .btn-enviar:active {
+    border: none;
+    background: var(--color-paragrafo);
   }
   
 
@@ -511,7 +517,14 @@ body {
     & .btn-sigma {
       font-size: 1rem;
       width: 274px;
+      transition: .1s;
       }
+
+    & .btn-sigma:active {
+      border: none;
+      background: var(--cor2);
+      color: var(--cor3);
+    }
   
     }
 
