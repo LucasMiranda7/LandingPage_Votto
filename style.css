@@ -29,24 +29,29 @@
 }
 
 body {
-  min-height: 100vh;
+ width: 100vw;
+ min-height: 100vh;
  font-family: var(--fonte1);
+ overflow-x: hidden;
 }
 
 
 .voitto-geral {
   background-color: var(--cor1);
+  width: 100vw;
+  
 
   display: flex;
   flex-direction: column;
   text-align: center;
+  justify-content: center;
 }
 
 .logo-voitto {
-  width: 27vw;
-  max-width: 100%;
-
-  margin-top: 3rem ;
+  margin: auto 10%;
+  width: 20vw; 
+  max-width: 100%; 
+  margin-top: 3rem;
 } 
 
 
@@ -54,7 +59,10 @@ body {
 .apresentação1-voitto {
   display: grid;
   grid-template-columns: 50% 50%;
+
+  margin:auto;
   padding-top: 2.5rem;
+ 
 }
 
 .textfield1 {
@@ -64,7 +72,7 @@ body {
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  text-align: justify;
+  width: 535px;
   
 }
 
@@ -73,7 +81,7 @@ body {
   font-weight: 800;
   font-size: 38px;
 
-  width: 535px;
+  /* width: 535px; */
 }
 
 .textfield1 > p {
@@ -81,12 +89,13 @@ body {
  font-size: 1.5rem;
 
  padding: 1rem 0 1.25rem 0;
- width: 522px;
+ width: 522px; 
 }
 
-.text_alert{ 
-  font-size: 1.5rem;
+.textfield1 .text_alert{ 
   font-weight: bold;
+  width: 500px; 
+
 }
 
 
@@ -95,7 +104,8 @@ body {
   flex-direction: column;
   justify-content: center;
   gap: 16px;
-  
+
+  width: 535px;
   padding: 1rem;
 }
 
@@ -104,8 +114,7 @@ body {
   border: 2px solid var(--cor2);
   border-radius: 10px;
   
-  width: 535px;
-  max-width: 100%;
+  
   padding: 1.4rem 0 1.3rem 1.5rem;
 }
 
@@ -127,7 +136,7 @@ body {
 
   margin-top: 2rem ;
   padding: 0.9rem;
-  width: 394px;
+  width: 396px;
   transition: .3s;
 }
 
@@ -201,7 +210,6 @@ body {
   justify-content: center;
   gap: 70px;
 
-
   & .imagem_ilustrativa3 {
   padding: 4.32rem 0 4.7rem 0;
   }
@@ -213,10 +221,10 @@ body {
   flex-direction: column;
  
   text-align: justify;
-
+  
   gap: 20px;
   width: 641px;
- 
+  
   
 
   & h3 {
@@ -262,22 +270,33 @@ body {
 
 @media (min-width: 780px) and (max-width:1024px) {
 
+  .voitto-geral {
+    width: 150%;
+  }
+
   .logo-voitto {
-    width: 40vw;
+    margin: auto 0%;
+    margin-top: 1rem;
   } 
+  
 
   .textfield1 {
     width:100vw;
+    transform: translate(-5%);
   }
 
   .textfield1 > h1 {
     width: 724px;
-   font-size: 2rem
+   font-size: 2rem;
   }
   
   .textfield1 > p {
    font-size: 1.4rem;
-   width: 724px;
+    width: 724px;
+  }
+
+  .textfield1 .text_alert {
+    transform: translate(-20%);
   }
   
 
@@ -288,7 +307,6 @@ body {
   
 .form_inscricao > input {
   width: 351px;
-  max-width: 100%;
 }
   
 
@@ -298,10 +316,16 @@ body {
   }
   
 .imagem_ilustrativa {
+ transform: translate(-60%);
   margin: 13.8rem 0 0 2rem;
-  margin-top: 13.8rem;
+  margin-top: 12rem;
   width: 38vw;
 }
+
+.apresentação2-voitto {
+  width: 100vw;
+}
+
 
 .textfield2 > h2 {
   font-size: 2rem;
@@ -325,5 +349,170 @@ body {
 }
 
 
+ .apresentação3-voitto {
+  width: 100vw;
+  height: 450px;
+  gap: 20px;
+
+  & .imagem_ilustrativa3 {
+    width: 235px;
+   
+  }
 }
 
+
+.textfield3 {
+  width: 460px;
+  transform: translate(0, 12%); 
+
+   & h3 {
+    font-size: 1.5rem;
+  }
+
+  & p {
+    font-size: 1.25rem;
+    
+  } 
+
+  & .btn-sigma {
+    font-size: 1.5rem;
+
+    margin-bottom: 0.6rem;
+    padding: 0.5rem;
+    width: 351px;
+    }
+  } 
+}
+
+
+
+
+
+@media (max-width: 780px) {
+
+  .voitto-geral {
+    width: 150%;
+  }
+
+  
+ 
+
+  .apresentação1-voitto {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin: auto -15%; */
+   }
+   
+
+  .logo-voitto {
+    margin-top: 0rem ;
+  } 
+
+  .textfield1  {
+    transform: translate(-60%);
+   align-items: center;
+   width: 274px;
+
+   & h1 {
+    font-size: 20px;
+   }
+
+   & p {
+    font-size:0.9rem;
+    width: 274px;
+   }
+  }
+
+
+  .textfield1 .text_alert {
+    width: 274px ;
+  }
+
+
+  .form_inscricao {
+    align-items: center;
+    
+   & .btn-enviar {
+    width: 274px ;
+    font-size: 1rem;
+   }
+
+   & input  {
+    width: 274px;
+   }
+} 
+
+ .imagem_ilustrativa {
+  padding-top: 7rem ;
+  width: 50%;
+} 
+
+
+.apresentação2-voitto {
+  width: 100vw;
+}
+
+
+  .textfield2 > h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 300px;
+  }
+  
+  .textfield2 > p {
+    font-size: 1rem;
+    width: 274px;
+  }
+
+  .btn-enviar {
+    width: 274px;
+  }
+  
+
+  .imagens_ilustrativa2 > img:nth-of-type(1) {
+    display: none;
+  }
+  
+  .imagens_ilustrativa2 > img:nth-of-type(2) {
+    display: none;
+  }
+  
+  .imagens_ilustrativa2 > img:nth-of-type(3) {
+    display: none;
+  }
+
+
+
+.apresentação3-voitto {
+  flex-direction: column;
+  width: 100vw;
+  & .imagem_ilustrativa3 {
+    width: 350px;
+    padding: 1.8rem 2.7rem;
+    padding-bottom: 0;
+  }
+}
+
+.textfield3 {
+    width: 274px;
+    gap: 10px;
+    transform: translate(0, -20%);
+   
+    & h3 {
+      font-size:1rem;
+    }
+  
+    & p {
+      font-size: 0.9rem;
+    }
+  
+    & .btn-sigma {
+      font-size: 1rem;
+      width: 274px;
+      }
+  
+    }
+
+}
