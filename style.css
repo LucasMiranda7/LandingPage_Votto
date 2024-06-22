@@ -1,0 +1,217 @@
+@charset "UTF-8";
+
+
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* Cores */
+
+  --cor1: #E7E7E7;
+  --cor2:  White;
+  --cor3: #FF4F5A;
+  --color-titulo: #1A2E35;
+  --color-paragrafo: #000000;
+
+
+  /* Fontes */
+
+  --fonte1: "Montserrat", sans-serif;
+
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  min-height: 100vh;
+ font-family: var(--fonte1);
+}
+
+
+.voitto-geral {
+  background-color: var(--cor1);
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.logo-voitto {
+  width: 27vw;
+  max-width: 100%;
+
+  margin-top: 3rem ;
+} 
+
+
+
+.apresentação1-voitto {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding-top: 2.5rem;
+}
+
+.textfield1 {
+  text-align: justify;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  
+}
+
+.textfield1 > h1 {
+  color: var(--color-titulo);
+  font-weight: 800;
+  font-size: 38px;
+
+  width: 535px;
+}
+
+.textfield1 > p {
+ color: var(--color-paragrafo);
+ font-size: 1.5rem;
+
+ padding: 1rem 0 1.25rem 0;
+ width: 522px;
+}
+
+.text_alert{ 
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+.form_inscricao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  
+  padding: 1rem;
+}
+
+.form_inscricao > input {
+  background: var(--cor2);
+  border: 2px solid var(--cor2);
+  border-radius: 10px;
+  
+  width: 535px;
+  max-width: 100%;
+  padding: 1.4rem 0 1.3rem 1.5rem;
+}
+
+.form_inscricao > input::placeholder {
+ font-size: 0.9rem;
+}
+
+.btn-enviar {
+  
+  background: var(--cor3);
+  color: var(--cor2);
+  border: 1px solid var(--cor3);
+  border-radius: 10px;
+
+  
+  align-items: center;
+  font-size: 26px;
+  font-weight: 800;
+
+  margin-top: 2rem ;
+  padding: 0.9rem;
+  width: 394px;
+  transition: .3s;
+}
+
+.btn-enviar:hover {
+  background-color: #ff4f5bd3;
+}
+
+.btn-enviar:active {
+  background-color: #ff4f5b7e;
+}
+
+.imagem_ilustrativa {
+ padding-top: 2.5rem;
+ margin-top: -7em;
+ width: 80vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 780px) and (max-width:1024px) {
+
+  .logo-voitto {
+    width: 40vw;
+  } 
+
+  .textfield1 {
+    width: 80vw;
+  }
+
+  .textfield1 > h1 {
+    width: 724px;
+   font-size: 2rem
+  }
+  
+  .textfield1 > p {
+   font-size: 1.4rem;
+   width: 724px;
+  }
+  
+
+.form_inscricao {
+  width: 92%;
+}
+
+  
+.form_inscricao > input {
+  width: 351px;
+  max-width: 100%;
+}
+  
+
+.btn-enviar {
+  font-size: 1.5rem;
+  width: 351px;
+  }
+  
+.imagem_ilustrativa {
+  margin: 13.8rem 0 0 2rem;
+  margin-top: 13.8rem;
+  width: 38vw;
+}
+
+}
+
